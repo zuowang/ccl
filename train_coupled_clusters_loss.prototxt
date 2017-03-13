@@ -589,11 +589,11 @@ layer {
 layer {
   bottom: "fc7_2_normalized"
   bottom: "label2"
-  type: "CoupledClustersLoss"
+  type: "CoupledClusterLoss"
   name: "coupled_clusters_loss2"
   top: "coupled_clusters_loss2"
   loss_weight: 0.5
-  coupled_clusters_loss_param {
+  coupled_cluster_loss_param {
     log_flag: false
     margin: 0.4
     group_size: 10
@@ -659,11 +659,11 @@ layer {
 layer {
   bottom: "fc8_feat_normalized"
   bottom: "label2"
-  type: "CoupledClustersLoss"
+  type: "CoupledClusterLoss"
   name: "coupled_clusters_loss_all"
   top: "coupled_clusters_loss_all"
   loss_weight: 1
-  coupled_clusters_loss_param {
+  coupled_cluster_loss_param {
     # log_flag: true
     margin: 0.4
     group_size: 10
